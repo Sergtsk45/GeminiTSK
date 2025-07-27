@@ -1,0 +1,50 @@
+{
+  "log": {
+    "loglevel": "warning"
+  },
+  "inbounds": [
+    {
+      "port": 443,
+      "protocol": "vless",
+      "settings": {
+        "clients": [
+          {
+            "id": "6f098e08-d799-46f2-88e0-7e8b182d59c1",
+            "flow": "xtls-rprx-vision"
+          }
+        ],
+        "decryption": "none"
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "show": false,
+          "dest": "www.google.com:443",
+          "xver": 0,
+          "serverNames": ["www.google.com"],
+          "privateKey": "QOrOB-Vdv9UthlbaJBnXmx-3xDNbRUASG_XrYZL3WH0",
+          "shortIds": ["0123456789abcdef"]
+        }
+      }
+    },
+    {
+      "port": 3128,
+      "protocol": "http",
+      "settings": {
+        "accounts": [
+          {
+            "user": "GeminiTSK",
+            "pass": "cvb145rfg"
+          }
+        ],
+        "auth": "password"
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom"
+    }
+  ]
+}
